@@ -6,7 +6,11 @@ const connectDB = async () => {
     console.log(`[MongoDB] Connected: ${conn.connection.host}`);
   } catch (err) {
     console.error('[MongoDB] Connection failed:', err.message);
-    process.exit(1);
+    if (process.env.NODE_ENV === 'production') {
+      process.exit(1);
+    } else {
+      console.warn('[MongoDB] Running in development mode without database connection');
+    }
   }
 };
 
