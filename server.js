@@ -1,10 +1,10 @@
 import express from "express";
 import path from "path";
+import cors from "cors";
 import { createServer as createViteServer } from "vite";
 import { connectDB } from "./server/config/db.js";
 import apiRouter from "./server/routes/index.js";
 import { scanAndEscalateComplaints } from "./server/utils/escalation.js";
-import cors from "cors";
 
 async function startServer() {
   // Connect to MongoDB
@@ -23,6 +23,14 @@ async function startServer() {
     origin: "https://YOUR-VERCEL-URL.vercel.app",
     credentials: true
   }));
+
+  app.use(
+  cors({
+    origin: "https://YOUR-VERCEL-DOMAIN.vercel.app",
+    credentials: true,
+  })
+);
+
   
 
   // Mount API router
