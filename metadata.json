@@ -1,0 +1,6 @@
+{
+  "name": "CivicPulse",
+  "description": "A 3-tier citizen grievance and local governance transparency platform for tracking complaints, departments, and SLA escalations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
