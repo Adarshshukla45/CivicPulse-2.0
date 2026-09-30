@@ -51,7 +51,7 @@ export default function DeptAdminDashboard({
       case "in_review":
         return <span className="bg-blue-100 text-blue-800 border border-blue-200 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">In Review</span>;
       default:
-        return <span className="bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">Pending</span>;
+        return <span className="bg-slate-100 text-slate-700 border border-slate-200 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">Pending</span>;
     }
   };
 
@@ -63,7 +63,7 @@ export default function DeptAdminDashboard({
       {/* Officer welcome block */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900 text-white rounded-2xl p-6 shadow-sm border border-slate-800">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono tracking-widest text-sky-400 font-bold uppercase">Government Console</span>
+          <span className="text-[10px] font-mono tracking-widest text-sky-500 font-bold uppercase">Government Console</span>
           <h1 className="text-xl font-bold font-display">{user?.name || "Department Officer"}</h1>
           <p className="text-xs text-slate-400">Managing official queue, resolving issues, and meeting SLAs.</p>
         </div>
